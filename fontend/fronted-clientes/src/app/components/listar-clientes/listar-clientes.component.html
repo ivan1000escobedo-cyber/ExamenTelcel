@@ -1,0 +1,43 @@
+<br>
+<div class="container">
+    <button type="button" (click)="agregar()" class="btn btn-outline-primary">
+        Agregar Nueva Clientes
+    </button>
+</div>
+
+<h3>Lista Clientes</h3>
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO P</th>
+                <th>APELLIDO M</th>
+                <th>FECHA</th>
+                <th>CELULAR</th>
+                <th>CORREO</th>
+                <th>NSS</th>
+                <th>CURP</th>
+                <th>ACCCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellidop}}</td>
+                <td>{{cliente.apellidom}}</td>
+                <td>{{cliente.fecha}}</td>
+                <td>{{cliente.celular}}</td>
+                <td>{{cliente.correo}}</td>
+                <td>{{cliente.nss}}</td>
+                <td>{{cliente.curp}}</td>
+                <td>
+                    <button (click)="editar(cliente.id)" class="btn btn-outline-warning">Editar</button>
+                    <button (click)="eliminar(cliente.id)" class="btn btn-outline-danger" style="margin-left: 20px;">Eliminar</button>
+                </td>
+            </tr>
+    </tbody>
+    </table>
+</div>

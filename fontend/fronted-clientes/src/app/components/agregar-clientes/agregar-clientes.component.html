@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card-shadow">
+        <div class="card-header bg-primary text-white">
+            <h3>Modulo/Formulario Agregar Nueva cliente</h3>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="guardar()">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" [(ngModel)]="cliente.nombre" required />
+                </div>
+                <div class="mb-3">
+                    <label for="apellidop" class="form-label">ApellidoP:</label>
+                    <input type="text" id="apellidop" name="apellidop" class="form-control" [(ngModel)]="cliente.apellidop" required />
+                </div>
+                <div class="mb-3">
+                    <label for="apellidom" class="form-label">apellidoM:</label>
+                    <input type="text" id="apellidom" name="apellidom" class="form-control" [(ngModel)]="cliente.apellidom" required />
+                </div>
+                <div class="mb-3">
+                    <label for="fecha" class="form-label">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" class="form-control" [(ngModel)]="cliente.fecha" required />
+                </div>
+                <div class="mb-3">
+                    <label for="celular" class="form-label">Celular:</label>
+                    <input type="text" id="celular" name="celular" class="form-control" [(ngModel)]="cliente.celular" required />
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo:</label>
+                    <input type="text" id="correo" name="correo" class="form-control" [(ngModel)]="cliente.correo" required />
+                </div>
+                <div class="mb-3">
+                    <label for="nss" class="form-label">Nss:</label>
+                    <input type="text" id="nss" name="nss" class="form-control" [(ngModel)]="cliente.nss" required />
+                </div>
+                <div class="mb-3">
+                    <label for="curp" class="form-label">Curp:</label>
+                    <input type="text" id="curp" name="curp" class="form-control" [(ngModel)]="cliente.curp" required />
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-outline-success">Guardar Datos</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
